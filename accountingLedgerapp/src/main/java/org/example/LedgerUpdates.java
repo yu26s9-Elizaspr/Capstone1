@@ -95,7 +95,7 @@ public class LedgerUpdates {
         //switch statements ?
         switch (ledgerChoice) {
             case "A":
-
+                LedgerMenu.displayAll();
                 break;
             case "D":
                 break;

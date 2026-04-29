@@ -40,6 +40,7 @@ public class Main {
                     break;
                 case "L":
                     System.out.println("Go to ledger?");
+                    LedgerUpdates.LedgerScreen(input);
                     break;
                 case "X":
                     System.out.println("Exit?");
