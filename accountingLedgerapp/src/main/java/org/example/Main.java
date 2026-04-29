@@ -17,9 +17,22 @@ public class Main {
         System.out.println("X - Exit");
 
         //User input
-        String Choice = input.nextLine();
+        String choice = input.nextLine().toUpperCase();
+
+        //Switch statements for home screen
+        switch (choice) {
+            case "D":
+                break;
+            case "P":
+                break;
+            case "L":
+                break;
+            case "X":
+                break;
+            default:
+                System.out.println("Invalid input! Please try again");
 
 
-
+        }
     }
 }
