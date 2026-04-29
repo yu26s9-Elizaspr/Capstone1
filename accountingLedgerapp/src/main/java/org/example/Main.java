@@ -32,10 +32,12 @@ public class Main {
             switch (choice) {
                 case "D":
                     System.out.println("Add a deposit?");
+                    LedgerUpdates.addDeposit(input);
                     break;
                 case "P":
                     System.out.println("Make a payment?");
                     break;
+
                 case "L":
                     System.out.println("Go to ledger?");
                     break;
