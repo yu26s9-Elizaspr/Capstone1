@@ -13,6 +13,10 @@ public class Main {
         // Added variables
         boolean running = true;
 
+
+        // Looping
+        while (running) {
+
         //SOUT Menu options
         System.out.println("D - Add Deposit");
         System.out.println("P - Make Payment");
@@ -23,8 +27,6 @@ public class Main {
         String choice = input.nextLine().toUpperCase();
 
 
-        // Looping
-        while (running) {
 
             //Switch statements for home screen
             switch (choice) {
@@ -47,5 +49,6 @@ public class Main {
 
             }
         }
+        input.close();
     }
 }
