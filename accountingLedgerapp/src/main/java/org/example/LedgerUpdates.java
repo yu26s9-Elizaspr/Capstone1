@@ -31,13 +31,55 @@ public class LedgerUpdates {
 
         //Filewriting
 
-        //open print to file
+        //open & print to file
         try (FileWriter writer = new FileWriter("transactions.csv", true)) {
             writer.write(record + "\n");
             System.out.println("Deposit saved!");
         } catch (IOException e) {
             System.out.println("Error writing file.");
         }
+
+    }
+
+    //method for "P"
+    public static void makePayment (Scanner input) {
+
+        // Auto generate time and date
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.now();
+
+
+        // prompt user for info
+        System.out.println("Enter a description: ");
+        String description = input.nextLine();
+
+        System.out.println("Enter the vendor: ");
+        String vendor = input.nextLine();
+
+        System.out.println("Enter the amount: ");
+        double amount = Double.parseDouble(input.nextLine());
+
+        //Forces a negative (just in case)
+        amount = -Math.abs(amount);
+
+        // Format like CSV file
+        String record = date + "|" + time + "|" + description + "|" +
+                vendor + "|" + amount;
+
+        //open & print to file
+        try (FileWriter writer = new FileWriter("transactions.csv", true)) {
+            writer.write(record + "\n");
+            System.out.println("Deposit saved!");
+        } catch (IOException e) {
+            System.out.println("Error writing file.");
+        }
+
+
+
+
+
+
+
 
     }
 
