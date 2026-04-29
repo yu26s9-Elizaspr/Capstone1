@@ -37,6 +37,17 @@ public class LedgerMenu {
 
     }
 
+    public static void displayDeposit () {
+
+    }
+
+    public static void displayPayments () {
+
+    }
+
+    public static void reports () {
+
+    }
 
 
 
