@@ -38,7 +38,6 @@ public class Main {
                     System.out.println("Make a payment?");
                     LedgerUpdates.makePayment(input);
                     break;
-
                 case "L":
                     System.out.println("Go to ledger?");
                     break;

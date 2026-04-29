@@ -69,7 +69,7 @@ public class LedgerUpdates {
         //open & print to file
         try (FileWriter writer = new FileWriter("transactions.csv", true)) {
             writer.write(record + "\n");
-            System.out.println("Deposit saved!");
+            System.out.println("Payment saved!");
         } catch (IOException e) {
             System.out.println("Error writing file.");
         }
