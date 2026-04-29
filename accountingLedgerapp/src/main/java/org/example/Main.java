@@ -10,6 +10,9 @@ public class Main {
         // Added scanner for user input
         Scanner input = new Scanner(System.in);
 
+        // Added variables
+        boolean running = true;
+
         //SOUT Menu options
         System.out.println("D - Add Deposit");
         System.out.println("P - Make Payment");
@@ -19,20 +22,30 @@ public class Main {
         //User input
         String choice = input.nextLine().toUpperCase();
 
-        //Switch statements for home screen
-        switch (choice) {
-            case "D":
-                break;
-            case "P":
-                break;
-            case "L":
-                break;
-            case "X":
-                break;
-            default:
-                System.out.println("Invalid input! Please try again");
+
+        // Looping
+        while (running) {
+
+            //Switch statements for home screen
+            switch (choice) {
+                case "D":
+                    System.out.println("Add a deposit?");
+                    break;
+                case "P":
+                    System.out.println("Make a payment?");
+                    break;
+                case "L":
+                    System.out.println("Go to ledger?");
+                    break;
+                case "X":
+                    System.out.println("Exit?");
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid input! Please try again");
 
 
+            }
         }
     }
 }
