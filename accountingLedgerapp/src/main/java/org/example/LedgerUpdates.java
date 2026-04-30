@@ -98,10 +98,14 @@ public class LedgerUpdates {
                 LedgerMenu.displayAll();
                 break;
             case "D":
+                LedgerMenu.displayDeposit();
                 break;
             case "P":
+                LedgerMenu.displayPayments();
                 break;
             case "R":
+                LedgerMenu.reports(input);
+
                 break;
             case "H":
                 break;
