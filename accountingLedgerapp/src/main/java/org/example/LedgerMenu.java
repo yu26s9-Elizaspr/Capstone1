@@ -146,7 +146,7 @@ public class LedgerMenu {
             System.out.println("0 - Back");
             System.out.println("H - Back to Home Page");
 
-            String choice = input.nextLine();
+            String choice = input.nextLine().toUpperCase();
 
 
             switch (choice) {

@@ -79,43 +79,48 @@ public class LedgerUpdates {
 
     public static void LedgerScreen(Scanner input) {
 
-        //Sout for Ledger Menu
-        System.out.println("Ledger screen: Please choose one ");
-        System.out.println(); // Space
-        System.out.println("A - View All ");
-        System.out.println("D - View Deposits");
-        System.out.println("P - View Payments ");
-        System.out.println("R - View Reports");
-        System.out.println("H - Go Back to Home Page");
+
+        boolean inLedger = true;
+
+        while (inLedger) {
+            //Sout for Ledger Menu
+            System.out.println("Ledger screen: Please choose one ");
+            System.out.println(); // Space
+            System.out.println("A - View All ");
+            System.out.println("D - View Deposits");
+            System.out.println("P - View Payments ");
+            System.out.println("R - View Reports");
+            System.out.println("H - Go Back to Home Page");
 
 
-        // Prompt user for choice
-        String ledgerChoice = input.nextLine();
+            // Prompt user for choice
+            String ledgerChoice = input.nextLine().toUpperCase();
 
-        //switch statements ?
-        switch (ledgerChoice) {
-            case "A":
-                LedgerMenu.displayAll();
-                break;
-            case "D":
-                LedgerMenu.displayDeposit();
-                break;
-            case "P":
-                LedgerMenu.displayPayments();
-                break;
-            case "R":
-                LedgerMenu.reports(input);
+            //switch statements ?
+            switch (ledgerChoice) {
+                case "A":
+                    LedgerMenu.displayAll();
+                    break;
+                case "D":
+                    LedgerMenu.displayDeposit();
+                    break;
+                case "P":
+                    LedgerMenu.displayPayments();
+                    break;
+                case "R":
+                    LedgerMenu.reports(input);
 
-                break;
-            case "H":
-                break;
-            default:
-                System.out.println("Invalid input! Please try again");
+                    break;
+                case "H":
+                    inLedger = false; // exit loop
+                    break;
+                default:
+                    System.out.println("Invalid input! Please try again");
 
+
+            }
 
         }
-
-
 
 
     }
