@@ -2,7 +2,6 @@ package org.example;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,9 +34,6 @@ public class LedgerMenu {
         catch (IOException e) {
             System.out.println("Error reading file.");
         }
-
-
-
     }
 
     public static void displayDeposit () {
@@ -71,15 +67,9 @@ public class LedgerMenu {
 
             }
 
-
-
-
         } catch (IOException e) {
             System.out.println("Error");
         }
-
-
-
     }
 
 
@@ -113,21 +103,10 @@ public class LedgerMenu {
                     System.out.println(lines.get(i));
 
             }
-
-
-
-
         } catch (IOException e) {
             System.out.println("Error");
         }
-
-
-
-
-
     }
-
-
 
 
     public static void reports (Scanner input) {
@@ -180,6 +159,7 @@ public class LedgerMenu {
 
     }
 
+
     //methods for reports
 
     private static void monthToDate () {
@@ -221,11 +201,7 @@ public class LedgerMenu {
             System.out.println("Error reading file.");
         }
 
-
-
         }
-
-
 
         private static void previousMonth () {
             System.out.println("Previous Month report");
@@ -265,12 +241,9 @@ public class LedgerMenu {
         }
 
 
-
         private  static void yearToDate(){
 
             System.out.println("Year to Date Report");
-
-
 
             LocalDate today = LocalDate.now();
             LocalDate firstofYear = today.withDayOfYear(1);
@@ -297,7 +270,6 @@ public class LedgerMenu {
                         System.out.println(lines.get(i));
                     }
                 }
-
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
@@ -336,7 +308,6 @@ public class LedgerMenu {
                         System.out.println(lines.get(i));
                     }
                 }
-
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
@@ -370,21 +341,12 @@ public class LedgerMenu {
                         System.out.println(lines.get(i));
                     }
                 }
-
             } catch (IOException e) {
                 System.out.println("Error reading file.");
             }
-
-
-
             }
 
-
-
-
-
 // closing bracket for LedgerMenu
-
 }
 
 

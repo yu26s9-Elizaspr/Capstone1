@@ -48,8 +48,6 @@ public class Main {
                     break;
                 default:
                     System.out.println("Invalid input! Please try again");
-
-
             }
         }
         input.close();

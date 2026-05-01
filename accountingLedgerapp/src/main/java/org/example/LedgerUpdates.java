@@ -14,6 +14,9 @@ public class LedgerUpdates {
         LocalDate date = LocalDate.now();
         LocalTime time = LocalTime.now();
 
+
+
+
         //Prompt user for info needed
         System.out.println("Enter description: ");
         String description = input.nextLine();
@@ -22,7 +25,7 @@ public class LedgerUpdates {
         String vendor = input.nextLine();
 
         System.out.println("Enter the amount: ");
-        double amount = input.nextDouble();
+        double amount = Double.parseDouble(input.nextLine());
 
 
         // Format like CSV file
