@@ -17,19 +17,29 @@ public class LedgerUpdates {
 
 
 
-        //Prompt user for info needed
-        System.out.println("Enter description: ");
-        String description = input.nextLine();
+    //Prompt user for info needed
+    System.out.println("Enter description: ");
+    String description = input.nextLine();
 
-        System.out.println("Enter the vendor: ");
-        String vendor = input.nextLine();
+    System.out.println("Enter the vendor: ");
+    String vendor = input.nextLine();
 
-        System.out.println("Enter the amount: ");
-        double amount = Double.parseDouble(input.nextLine());
+
+    System.out.println("Enter the amount: ");
+    double amount;
+
+    try {
+         amount = Double.parseDouble(input.nextLine());
+
+    } catch (NumberFormatException e) {
+        System.out.println("Wrong amount please try again");
+        addDeposit(input);
+        return;
+    }
 
 
         // Format like CSV file
-        String record = date + "|" + time + "|" + description + "|" +
+       String record = date + "|" + time + "|" + description + "|" +
                 vendor + "|" + amount;
 
         //Filewriting
@@ -60,7 +70,15 @@ public class LedgerUpdates {
         String vendor = input.nextLine();
 
         System.out.println("Enter the amount: ");
-        double amount = Double.parseDouble(input.nextLine());
+        double amount;
+
+        try {
+            amount = Double.parseDouble(input.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("Wrong amount, please try again.");
+            addDeposit(input);
+            return;
+        }
 
         //Forces a negative (just in case)
         amount = -Math.abs(amount);
