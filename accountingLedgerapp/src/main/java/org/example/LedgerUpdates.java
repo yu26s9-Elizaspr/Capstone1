@@ -24,16 +24,16 @@ public class LedgerUpdates {
     System.out.println("Enter the vendor: ");
     String vendor = input.nextLine();
 
-
+     //amount code
     System.out.println("Enter the amount: ");
-    double amount;
+    double amount; // declared variable
 
-    try {
-         amount = Double.parseDouble(input.nextLine());
+    try {      // start of try block
+         amount = Double.parseDouble(input.nextLine()); // reads what the user types as a string and converts to double
 
-    } catch (NumberFormatException e) {
+    } catch (NumberFormatException e) { // if they type letters it throws this type of error
         System.out.println("Wrong amount please try again");
-        addDeposit(input);
+        addDeposit(input); // restarts the method
         return;
     }
 
@@ -70,10 +70,10 @@ public class LedgerUpdates {
         String vendor = input.nextLine();
 
         System.out.println("Enter the amount: ");
-        double amount;
+       double amount;
 
         try {
-            amount = Double.parseDouble(input.nextLine());
+           amount = Double.parseDouble(input.nextLine());
         } catch (NumberFormatException e) {
             System.out.println("Wrong amount, please try again.");
             addDeposit(input);

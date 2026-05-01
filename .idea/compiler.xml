@@ -9,5 +9,8 @@
         <module name="accountingLedgerapp" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Images" target="26" />
+    </bytecodeTargetLevel>
   </component>
 </project>
